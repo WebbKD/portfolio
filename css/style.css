@@ -13,6 +13,11 @@ section{
     width: 100%;
 }
 
+li{
+    list-style: none;
+    text-align: center;
+}
+
 .container{
     width: 80%;
     margin: 0 auto;
@@ -28,6 +33,28 @@ section{
     border-radius: 0 0 2px 2px;
 }
 
+.icon-block{
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.tile{
+    
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...} 
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {...} 
+
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...} */
 
 
 
@@ -43,24 +70,31 @@ section{
 }
 
 .grid-wrapper{
+   
     width: 80%;
-    height: 80%;
-    margin: auto;
+    margin: 50px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "left-content right-content"
-    "left-content right-content";
+    
 }
+
+.grid-wrapper-template-about{
+    grid-template-areas:
+    "right-content"
+    "right-content";
+}
+
 
 #about{
     display: grid;
 }
 
 .about-left-content{
+    display: none;
     grid-area: left-content;
-    min-width: 525px;
-    background: url(https://ak8.picdn.net/shutterstock/videos/2302028/thumb/1.jpg);
+    align-items: center;
+    justify-items: center;
+    
+    /*background: url(https://ak8.picdn.net/shutterstock/videos/2302028/thumb/1.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -68,16 +102,14 @@ section{
 
 .about-right-content{
     grid-area: right-content;
-    min-width: 525px;
+    width: 100%;
     display: grid;
     align-items: center;
-    overflow: hidden;
+
    
 }
 
 .content-right-content-wrapper{
-    height: 70%;
-    width: 90%;
     margin: 0 auto;
     text-align: center;
     font-size: 1.1rem;
@@ -85,12 +117,16 @@ section{
 }
 
 
+#skills{
+    display: grid;
+
+}
+
 
 /* Style all font awesome icons */
 .fa {
-    padding: 20px;
     font-size: 35px !important;
-    width: 120px;
+    width: 100%;
     text-align: center;
     text-decoration: none;
 }
