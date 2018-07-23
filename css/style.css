@@ -205,19 +205,6 @@ textarea:focus{
     transition: .2s;
 }
 
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) 
-@media only screen and (min-width: 600px) {...} 
-
-/* Medium devices (landscape tablets, 768px and up) 
-@media only screen and (min-width: 768px) {...} 
-
-/* Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {...} */
-
-
-
 #home{
     background: linear-gradient(
         rgba(255, 207, 153, .7),
@@ -256,11 +243,7 @@ textarea:focus{
     grid-area: left-content;
     align-items: center;
     justify-items: center;
-    
-    /*background: url(https://ak8.picdn.net/shutterstock/videos/2302028/thumb/1.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
 }
 
 .about-right-content{
@@ -334,7 +317,7 @@ textarea:focus{
 @media only screen and (min-width: 992px) {
     .grid-wrapper-template-projects{
         display: grid;
-        grid-template-columns: 300px 300px 300px;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 10px;
         grid-template-areas:
         "title title title"
@@ -369,7 +352,7 @@ textarea:focus{
 @media only screen and (min-width: 992px) {
     .grid-wrapper-template-blogs{
         display: grid;
-        grid-template-columns: 300px 300px;
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
         grid-template-areas:
         "title title"
