@@ -10,20 +10,18 @@
 </head>
 
 <body>
-    <header>
+        <nav>
+            <div class="nav-bar">
+                <a href="">Logo</a>
+                <span>&#9776;</span>
+            </div>
+        </nav>
 
-    </header>
 
 
         <section id="home">
-            <div class="row">
-                <div class="col s12 m12 l12 center-align">
-                    <span>The name is Kendell Webb and I'm a</span>
-                    <h1 style="color: rgb(247, 207, 162)"> FullStack Developer
-                        <br/> and
-                        <br /> Digital Marketer</h1>
-                    <span>From New York City</span>
-                </div>
+            <div class="landing-text">
+                Hey, I'm <span style="color: rgb(247, 207, 162)">Kendell Webb</span>. <br/> I am a FullStack Developer <br /> and <br /> Digital Marketer.
             </div>
         </section>
 
@@ -49,9 +47,9 @@
         </section>
 
         <section id="skills">
-            <div class="grid-wrapper card">
-                <div class="skills-content">
-                    <div class="icon-block">
+            <div class="grid-wrapper card grid-wrapper-template-skills">
+                    <h2 class="title" style="text-align: center;">Skills</h2>   
+                    <div class="icon-block ">
                         <i class="fa fa-database" aria-hidden="true"></i>
                         <h2 class="center-text">Backend</h2>
                         <li>C#/Asp.Net MVC5</li>
@@ -80,16 +78,58 @@
                         <li>Google Ad Words</li>
                         <li>Facebook Ads</li>
                     </div>
-                </div>
             </div>        
         </section>
-
+ 
         <section id="projects">
-            <div class="grid-wrapper card">
+            <div class="grid-wrapper card grid-wrapper-template-projects">
+               <h2 class="title" style="text-align: center;">My Recent Projects</h2>
+               <div class="tile">
+                   <div class="tile-title">
+                       My first project
+                   </div>            
+                   <a href="" class="btn tile-btn"> Read More</a>
+               </div>
                <div class="tile"></div>
-            </div>        
+               <div class="tile"></div>
+               <div class="tile"></div>
+               <div class="tile"></div>
+               <div class="tile"></div>
+               <a href="" class="btn projects-btn">View All Projects</a> 
+            </div>
         </section>
 
+        <section id="blog">
+            <div class="grid-wrapper card grid-wrapper-template-blogs">
+                <h2 class="title" style="text-align: center;">My Recent Blogs</h2>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <a href="" class="btn blogs-btn">View All Blogs</a> 
+             </div>   
+        </section>
+   
+        <footer>
+            <h2 style="text-align: center">Contact Me</h2>
+            <div class="container">
+            <h4 style="text-align: center">Have any questions or want to work together?</h4>   
+            </div>
+            <div class="container"> 
+            <form action="" class="form-container grid-wrapper-template-form">
+                <input type="text" id="guestName" placeholder="Name" class="name" />
+                <input type="text" id="email"  placeholder="Email" class="email"/>
+                <textarea name="" id="message" cols="30" rows="8" placeholder="Message" class="message"></textarea>
+                <input type="submit" class="btn contact-btn" style="margin: 0 auto;">
+            </form>
+            </div>
+            <br/>
+            <div class="footer-copy">
+             <div class="container"> 
+                 &copy 2018 Kendell Webb 
+             </div>   
+            </div>
+        </footer>
 </body>
 
 </html>
