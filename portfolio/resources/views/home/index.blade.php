@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.master')
 
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
-        <nav style="position: fixed;">
-            <div class="nav-bar">
-                <a href="">Logo</a>
-                <span>&#9776;</span>
-            </div>
-        </nav>
-
-
-
+@section('content')
         <section id="home">
             <div class="landing-text">
                 Hey, I'm <span style="color: rgb(247, 207, 162)">Kendell Webb</span>. <br/> I am a FullStack Developer <br /> and <br /> Digital Marketer.
@@ -27,7 +9,6 @@
 
         <section id="about">
             <div class="grid-wrapper card grid-wrapper-template-about">
-
                 <div class="about-right-content">
                     <div class="content-right-content-wrapper">
                         <h2>About</h2>
@@ -107,27 +88,4 @@
                 <a href="" class="btn blogs-btn">View All Blogs</a> 
              </div>   
         </section>
-   
-        <footer>
-            <h2 style="text-align: center">Contact Me</h2>
-            <div class="container">
-            <h4 style="text-align: center">Have any questions or want to work together?</h4>   
-            </div>
-            <div class="container"> 
-            <form action="" class="form-container grid-wrapper-template-form">
-                <input type="text" id="guestName" placeholder="Name" class="name" />
-                <input type="text" id="email"  placeholder="Email" class="email"/>
-                <textarea name="" id="message" cols="30" rows="8" placeholder="Message" class="message"></textarea>
-                <input type="submit" class="btn contact-btn" style="margin: 0 auto;">
-            </form>
-            </div>
-            <br/>
-            <div class="footer-copy">
-             <div class="container"> 
-                 &copy 2018 Kendell Webb 
-             </div>   
-            </div>
-        </footer>
-</body>
-
-</html>
+@endsection
