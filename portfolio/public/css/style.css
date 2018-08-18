@@ -41,6 +41,7 @@ nav{
     display: block;
     background-color: #4F4F4f;
     right: 0;
+    top:0;
 
 }
 
@@ -340,7 +341,7 @@ a.btn{
 
 .blog-listing{
     display: grid;
-    grid-template-columns: 2fr 1fr ;
+    grid-template-columns: 1fr ;
     padding-top: 6rem;
     padding-bottom: 2rem;
 }
@@ -371,35 +372,103 @@ a.btn{
     padding: 16px 24px;
 }
 
-.category-box{
-    text-align: center;
-    width: 80%;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-    margin: 3.7rem auto 1rem auto;
+.img-block{
+    background-image: url(https://media.istockphoto.com/photos/cup-of-coffee-on-the-table-picture-id532482141?k=6&m=532482141&s=612x612&w=0&h=TKOWnOXkhRZ-qR-tEIUVVPC7SVBWaPsvq0LMrrsDn8E=);
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.category-box ul{
-    padding: 0;
+.blog-list ul{
     list-style: none;
+    padding: 0;
 }
 
+.blog-list ul li{
+    padding: 7px;
+    display: inline-block;
+    background-color: #851F1D;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
+    0 1px 5px 0 rgba(0,0,0,0.12), 
+    0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.blog-list ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.blog-list ul li:hover{
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    transition: .4s;
+}
+
+/*Project list css*/
 .project-list{
     width: 100%;
 }
-/*Project list css*/
+
 .masonry-project-display{
     width: 90%;
     margin: 50px auto;
     column-width: 220px;
     column-count: 3;
+    column-gap: 15px;
 }
 
-.masonry-project-display a{
+.masonry-card{
     text-decoration: none;
     padding: 1rem;
+    padding-bottom: 1.5rem;
     color: #424242;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+.masonry-card:hover{
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    transition: .4s;
+}
+
+.masonry-card img{
+    width: 100%;
+}
+
+/*Post page*/
+.post-grid{
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+.post-content{
+    padding: 1rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    width: 90%;
+    margin: 20px auto;
+}
+
+.right-sidebar{
+    padding: 1rem;
+    margin: 10px 0;
+}
+
+.right-side-content{
+    padding: 1rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+
+}
+
+

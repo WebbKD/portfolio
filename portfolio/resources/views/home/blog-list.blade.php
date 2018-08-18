@@ -23,7 +23,19 @@
 @section('content')
     <section class="blog-listing section-content">
         <div class="blog-list">
+            <!--Img block top-->
+            <div class="img-block">
+
+            </div>
             <h3>All Blog Articles</h3>
+            <!--Chips for categories-->
+            <ul>
+                <li> <a href="">SEO</a></li>
+                <li>Free Lancing</li>
+                <li>Web Development</li>
+            </ul>
+
+
             <div>
                 <div class="blog-box-grid">
                     <div class="blog-card-img"> <img src="https://i.ytimg.com/vi/MsoJQzG2FUU/maxresdefault.jpg" alt="" width="100%" height="100%"></div>
@@ -34,21 +46,13 @@
                         </div>
                         <div class="blog-card-footer">
                                 <hr>
-                                <span>Date: Jun 20th 2018</span>
+                                <h4>Date: Jun 20th 2018</h4>
+                                <a href="" class="btn">View Article</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-        <div class="category-list">
-            <div class="category-box">
-                <h3>Categories</h3>
-                <ul>
-                    <li>Some Category</li>
-                    <li>Some Category</li>
-                </ul>
-            </div>
         </div>
     </section>
 @endsection

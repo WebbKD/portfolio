@@ -14,3 +14,6 @@
 Route::get('/', 'HomeController@index');
 Route::get('/blog', 'HomeController@blogList');
 Route::get('/projects', 'HomeController@projectList');
+Route::get('/post', 'HomeController@viewPost');
+Auth::routes();
+Route::get('/admin', 'AdminController@index');
