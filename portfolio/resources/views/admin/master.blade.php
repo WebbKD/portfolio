@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin</title>
+        <!-- include libraries(jQuery, bootstrap) -->
+    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+
+
+    include summernote css/js -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    
 </head>
 <body>
         <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
@@ -36,14 +44,12 @@
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">
-                            <span data-feather="shopping-cart"></span>
+                          <a class="nav-link" href="/create-post">
                                 View Posts
                           </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="shopping-cart"></span>
+                            <a class="nav-link"  href="/create-post">
                                 New Post
                             </a>
                         </li>
@@ -57,8 +63,9 @@
                 </div>
               </div>
           
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
 <script src="js/app.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+@yield('javascriptLinks')
 </body>
 </html>

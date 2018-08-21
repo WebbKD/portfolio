@@ -43,5 +43,11 @@ class adminController extends Controller
         
     }
 
+    public function editorUpload(Request $request){
+        $image = $request->file();
+        $filename = time() . '.' . $image->getClientOriginalExtension();
+        $location = public_path('images/'. $filename);
+    }
+
 
 }

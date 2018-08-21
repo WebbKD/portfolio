@@ -20,4 +20,8 @@ class homeController extends Controller
     public function projectList(){
         return view('home.project-list');
     }
+
+    public function viewPost(){
+        return view('home.post');
+    }
 }
