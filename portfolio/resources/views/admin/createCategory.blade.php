@@ -7,7 +7,7 @@
         <div class="form-row">
             <div class="form-group col-md-12">
             <label for="category"></label>
-            <input type="text" class="form-control" id="category" placeholder="Title">
+            <input type="text" class="form-control" id="category" name="name" placeholder="Title">
             </div>
 
         </div>

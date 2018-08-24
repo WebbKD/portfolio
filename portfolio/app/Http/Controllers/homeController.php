@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\post;
 
 class homeController extends Controller
 {
@@ -22,6 +23,7 @@ class homeController extends Controller
     }
 
     public function viewPost(){
-        return view('home.post');
+        $post = post::find(2);
+        return view('home.post', compact('post'));
     }
 }
