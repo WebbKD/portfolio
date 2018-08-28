@@ -17,11 +17,13 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             
             $table->string('title');
-            $table->string('postImg');
-            $table->boolean('status');
+            $table->string('postImg')->nullable();
+            $table->boolean('status')->default(0);
             $table->longText('content');
             $table->string('siteLink')->nullable();
-            $table->integer('categroy_id');
+            $table->string('slug');
+            $table->integer('category_id');
+            $table->integer('tag_id');
             $table->timestamps();  
         });
     }

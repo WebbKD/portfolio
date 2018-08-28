@@ -7,20 +7,19 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
+          <th>Tag Name</th>
+          <th colspan="2"></th>
         </tr>
       </thead>
       <tbody>
+        @foreach($tags as $tag)
         <tr>
-          <td>1,001</td>
-          <td>Lorem</td>
-          <td>ipsum</td>
-          <td>dolor</td>
-          <td>sit</td>
+          <td>{{$tag->id}}</td>
+          <td>{{$tag->name}}</td>
+          <td><a href="/edit-tag/{{$tag->id}}" class="btn btn-primary">Edit</a></td>
+          <td><a href="/destroy-tag/{{$tag->id}}" class="btn btn-danger">Destroy</a></td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>

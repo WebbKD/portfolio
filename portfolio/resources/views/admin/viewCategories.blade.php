@@ -7,17 +7,21 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Header</th>
-          <th>Header</th>
+          <th>Name</th>
+          <th>Slug</th>
+          <th colspan="2"></th>
         </tr>
       </thead>
       <tbody>
+          @foreach($categories as $category)
         <tr>
           <td>{{ $category->id }}</td>
           <td>{{ $category->name }}</td>
-          <td><!--Edit button-->r</td>
-          <td><!--Delete Button-->sit</td>
+          <td>Slug Name</td>
+          <td><a href="/edit-category/{{ $category->id }}" class="btn btn-primary">Edit</a></td>
+          <td><a href="/destroy-category/{{$category->id}}" class="btn btn-danger">Remove</a></td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>

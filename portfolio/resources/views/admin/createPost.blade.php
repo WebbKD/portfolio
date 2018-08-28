@@ -12,26 +12,29 @@
             </div>
 
             <div class="form-group col-md-6">
+                    <label for="siteLink">Site Link</label>
+                    <input type="text" class="form-control" id="siteLink" name="siteLink">
+            </div>
+
+            <div class="form-group col-md-6">
                 <label for="category">Category</label>
-                <select id="category" class="form-control">
-                    <option>Project</option>
-                    <option>Blog</option>
+                <select id="category" class="form-control" name="category_id">
+                    @foreach($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                    @endforeach
                 </select>
             </div>
 
             <div class="form-group col-md-6">
-                <label for="siteLink">Site Link</label>
-                <input type="text" class="form-control" id="siteLink" name="siteLink">
+                    <label for="category">Tag</label>
+                    <select id="category" class="form-control" name="tag_id">
+                        @foreach($tags as $tag)
+                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                        @endforeach
+                    </select>
             </div>
 
-            <div class="form-group col-md-6">
-                <label for="category">Tags</label>
-                <select id="category" class="form-control">
-                    <option>SEO</option>
-                    <option>Freelance</option>
-                    <option>Case Study</option>
-                </select>
-            </div>
+            
         </div>
 
         <div class="form-group">

@@ -7,20 +7,22 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
-          <th>Header</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Site Link</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
+        @foreach($posts as $post)
         <tr>
-          <td>1,001</td>
-          <td>Lorem</td>
-          <td>ipsum</td>
-          <td>dolor</td>
-          <td>sit</td>
+          <td>{{$post->id}}</td>
+          <td>{{$post->title}}</td>
+          <td>{{$post->category->name}}</td>
+          <td>{{$post->siteLink}}</td>
+          <td>{{$post->active()}}</td>
         </tr>
+        @endforeach
       </tbody>
     </table>
   </div>

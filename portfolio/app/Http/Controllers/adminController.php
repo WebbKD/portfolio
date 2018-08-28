@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\post;
 use App\category;
+use App\tag;
 use \DomDocument;
 use Image;
 use Storage;
@@ -32,7 +33,7 @@ class adminController extends Controller
     public function storeCategory(Request $request){
 
         $category = new category;
-        $category->title = $request->title;
+        $category->name = $request->name;
 
         $category->save();
 
@@ -47,27 +48,48 @@ class adminController extends Controller
     }
 
     public function updateCategory(Request $request, $id){
+
         $category = category::find($id);
-
         $category->name = $request->name;
-
-        $category->save();
+        $category->update();
         return redirect('/view-categories');
     }
 
+    public function viewPosts(){
+        $posts = post::all();
 
+        return view('admin.viewPosts', compact('posts'));
+    }
 
     public function createPost(){
 
-        return view('admin.createPost');
+        $categories = category::all();
+        $tags = tag::all();
+
+        return view('admin.createPost', compact('categories', 'tags'));
     }
 
     public function storePost(Request $request){
 
         $post = new post;
         $post->title = $request->title;
+        $post->slug = str_slug($request->title, '-');
+        $post->siteLink = $request->siteLink;
+        $post->category_id = $request->category_id;
+        $post->tag_id = $request->tag_id;
 
-        $message=$request->input('content');
+        //adding the image
+        if($request->hasFile('postImg')){
+            $post_image = $request->file('postImg');
+            $post_image_filename = time() . '.' . $post_image->getClientOriginalExtension();
+            $location = public_path('images/'. $post_image_filename);
+            Image::make($post_image)->save($location);
+
+            $post->postImg = $post_image_filename;
+        }
+
+       //Adding the content 
+       $message=$request->input('content');
 
        $dom = new DomDocument();
 
@@ -109,23 +131,58 @@ class adminController extends Controller
             } // <!--endif
         } // 
         $post->content = $dom->saveHTML();
+        //finished adding the content
+
+        
         $post->save();
 
         return redirect('/admin');
     }
 
-    public function showPost(post $post){
+    public function editPost($id){
+
+        $post = post::find($id);
+        return view('admin.editPost', compact('post'));
 
     
     }
 
-    public function updatePost(Request $request, post $post){
+    public function updatePost(Request $request, $id){
+        
+        $post = post::find($id);
 
-    }
 
-    public function destroy(post $post){
         
     }
+
+    public function destroyPost($id){
+        
+    }
+
+    public function viewTags(){
+
+        $tags = tag::all();
+        return view('admin.viewTags', compact('tags'));
+
+    }
+
+    public function createTag(){
+
+        return view('admin.createTag');
+    }
+
+    public function storeTag(Request $request){
+
+        $tag = new tag;
+
+        $tag->name = $request->name;
+        $tag->slug = str_slug($request->name, '-');
+        $tag->save();
+
+        return redirect('/view-tags');
+    }    
+
+
 
 
 

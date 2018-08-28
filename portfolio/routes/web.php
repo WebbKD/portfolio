@@ -13,8 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/blog', 'HomeController@blogList');
+Route::get('/blog/{tag}', 'HomeController@blogListByTag');
 Route::get('/projects', 'HomeController@projectList');
-Route::get('/post', 'HomeController@viewPost');
+Route::get('/project/{post}', 'HomeController@viewPost');
+Route::get('/{tag}/{post}', 'HomeController@viewPost');
 Auth::routes();
 Route::get('/admin', 'AdminController@index');
 
@@ -27,6 +29,7 @@ Route::post('/update-post/{post}', 'AdminController@updatePost');
 
 Route::get('/view-categories', 'AdminController@viewCategories');
 Route::get('/create-category', 'AdminController@createCategory');
+Route::post('/store-category', 'AdminController@storeCategory');
 Route::get('/edit-category/{category}', 'AdminController@editCategory');
 Route::post('/update-category/{category}', 'AdminController@updateCategory');
 
@@ -34,5 +37,5 @@ Route::get('/view-tags', 'AdminController@viewTags');
 Route::get('/create-tag', 'AdminController@createTag');
 Route::post('/store-tag','AdminController@storeTag');
 
-Route::post('/add-tag-to-post/{post}/{tag}', 'AdminController@storePostTag');
+
 

@@ -12,8 +12,8 @@
     include summernote css/js -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
     
 </head>
 <body>
@@ -32,19 +32,27 @@
                     <div class="sidebar-sticky">
                       <ul class="nav flex-column">
                         <li class="nav-item">
-                          <a class="nav-link" href="#">
-                            <span data-feather="home"></span>
+                          <a class="nav-link" href="/view-categories">
                             View Categories
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
+                          <a class="nav-link" href="/create-category">
                                 New Category
                           </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/create-post">
+                          <a class="nav-link" href="/view-tags">
+                            View Tags
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/create-tag">
+                              New Tag
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/view-posts">
                                 View Posts
                           </a>
                         </li>
@@ -64,7 +72,7 @@
               </div>
           
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
-<script src="js/app.js"></script>
+<script src="/js/app.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 @yield('javascriptLinks')
 </body>
